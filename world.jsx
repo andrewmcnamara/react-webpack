@@ -1,9 +1,11 @@
-import React from 'react';
+var React = require('react');
+var ReactDOM = require('react-dom');
 
-class World extends React.Component {
-  render() {
-    return <h1>World</h1>
-  }
-}
+var World = ({species, color}) => (
+  <h1>
+    {species} - {color}
+  </h1>
+);
 
-React.render(<World/>, document.getElementById('world'));
+
+ReactDOM.render(<World species="alien" color="blue"/>, document.getElementById('world'));
